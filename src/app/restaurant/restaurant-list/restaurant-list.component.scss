@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.list {
+  margin-top: 6px;
+}
+
+.list > a:first-of-type {
+  background-color: #fff6c6;
+}
+
+ngx-input-star-rating {
+  margin: 4px 0 0 -5px;
+}

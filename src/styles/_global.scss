@@ -1,0 +1,15 @@
+body {
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+ngx-loading-spinner {
+  margin: 48px auto;
+  width: 100px;
+  display: block !important;
+
+  .ngx-loading-spinner__circle {
+    border: 5px solid rgba(226, 226, 226, 0.8) !important;
+    border-left: 5px solid #cfcfcf !important;
+  } 
+}

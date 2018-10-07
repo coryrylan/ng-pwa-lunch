@@ -1,0 +1,10 @@
+@import './../../styles/_config';
+
+img {
+  width: 100%;
+  max-width: 170px;
+
+  @media (min-width: 500px) {
+    max-width: 250px;
+  }
+}

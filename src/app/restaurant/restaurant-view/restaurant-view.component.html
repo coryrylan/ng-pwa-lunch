@@ -1,0 +1,27 @@
+<ng-container *ngIf="restaurant | async; let restaurant; else loading">
+  <h1>{{restaurant.name}}</h1>
+
+  <h2 *ngIf="restaurant.openingHours">{{restaurant.openingHours.openNow ? 'Open Now' : 'Closed'}}</h2>
+  <h2 *ngIf="!restaurant.openingHours">Opening Hours Unknown</h2>
+  <ngx-input-star-rating [value]="restaurant.rating" [disabled]="true"></ngx-input-star-rating>
+
+  <div bp="margin-top">
+    <a [href]="'tel:' + restaurant.phoneNumber">{{restaurant.phoneNumber}}</a>
+  </div>
+
+  <a [href]="'https://www.google.com/maps/search/?api=1&query=' + restaurant.coordinates.lat + ',' + restaurant.coordinates.lng + '&query_place_id=' + restaurant.id">
+    <address bp="margin-top margin-bottom--lg">
+      {{restaurant.address}}
+    </address>
+  </a>
+
+  <ng-container *ngIf="restaurant.openingHours">
+    <div *ngFor="let day of restaurant.openingHours.weekdays" bp="margin-bottom--sm">
+      {{day}}
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <ngx-loading-spinner></ngx-loading-spinner>
+</ng-template>

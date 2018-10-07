@@ -1,0 +1,7 @@
+<h1>Settings</h1>
+<br>
+
+<form [formGroup]="settingsForm">
+  <label for="distance">Distance ({{distance | async}}mi)</label>
+  <input type="range" formControlName="distance" id="distance" min="5" max="20" bp="4--max" />
+</form>

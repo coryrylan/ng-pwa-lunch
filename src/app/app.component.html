@@ -1,0 +1,31 @@
+<ngx-nav-drawer [fixed]="true" [(open)]="showMenu">
+  <a routerLink="/">Search</a>
+  <a routerLink="/settings">Settings</a>
+  <a routerLink="/about">About</a>
+</ngx-nav-drawer>
+
+<div class="container">
+  <header>
+    <button (click)="showMenu = !showMenu" aria-label="menu">
+      <i class="icon-menu"></i>
+    </button>
+    <h2>ng-pwa-lunch</h2>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <button routerLink="/restaurants" class="btn--action" aria-label="Find Restaurants">
+    <i class="icon-location"></i>
+  </button>
+
+  <div *ngIf="showUpdatePrompt | async" class="update-prompt">
+    An update is available.
+    <button (click)="update()">Update</button>
+  </div>
+
+  <!-- <footer>
+    Cory Rylan 2018
+  </footer> -->
+</div>

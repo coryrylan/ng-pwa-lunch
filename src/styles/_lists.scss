@@ -1,0 +1,35 @@
+.list {
+  display: block;
+  margin: 0 -8px;
+
+  @media (min-width: $menu-break) {
+    margin: -12px -24px;
+  }
+
+  & > * {
+    display: block;
+    text-decoration: none;
+    color: $color-text;
+    padding: 8px;
+    border-bottom: 1px solid $color-grey;
+
+    @media (min-width: $menu-break) {
+      margin: 0;
+      padding: 12px 18px;
+    }
+
+    &:first-child {
+      border-top: 1px solid $color-grey;
+    }
+  }
+
+  h2, h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  small {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,23 @@
+<!-- <form [formGroup]="form">
+  <label>
+    <div>Search For Food!</div>
+    <input formControlName="search" />
+  </label>
+</form> -->
+
+<section *ngIf="restaurants | async; let restaurants; else loading;" class="list">
+  <a *ngFor="let r of restaurants; let first = first;" [routerLink]="[r.id]" rel="noopener">
+    <h2>
+      {{r.name}}
+      <small *ngIf="first"> (random suggestion)</small>
+    </h2>
+    <address>
+      {{r.address}}
+    </address>
+    <ngx-input-star-rating [value]="r.rating" [disabled]="true"></ngx-input-star-rating>
+  </a>
+</section>
+
+<ng-template #loading>
+  <ngx-loading-spinner></ngx-loading-spinner>
+</ng-template>

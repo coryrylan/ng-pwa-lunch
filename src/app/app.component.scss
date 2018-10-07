@@ -1,0 +1,76 @@
+@import "./../styles/_config";
+
+.container {
+  @media (min-width: $menu-break) {
+    padding-left: 250px;
+  }
+}
+
+header {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 4px 2px;
+  min-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+
+  @media (min-width: $menu-break) {
+    padding: 10px 2px 18px 265px;
+  }
+
+  h2 {
+    margin: 6px 0 0 0;
+  }
+
+  button {
+    float: left;
+    padding: 4px;
+    min-width: 54px;
+    background: transparent;
+    border: 0;
+    color: $color-white;
+    font-size: 2em;
+
+    @media (min-width: $menu-break) {
+      display: none;
+    }
+  }
+}
+
+main {
+  padding: 65px 8px 8px 8px;
+
+  @media (min-width: $menu-break) {
+    padding: 75px 12px 12px 12px;
+  }
+}
+
+.update-prompt {
+  padding: 16px;
+  color: $color-white;
+  background-color: $color-grey-dark;
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  line-height: 1.5em;
+  z-index: 1000;
+
+  @media (min-width: 400px) {
+    left: calc(50% - 200px);
+  }
+
+  button {
+    float: right;
+    border: 0;
+    background: transparent;
+    color: $color-white;
+    padding: 4px;
+  }
+}
