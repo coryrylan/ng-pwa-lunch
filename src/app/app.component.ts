@@ -1,7 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { Observable } from 'rxjs';
-import { startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
