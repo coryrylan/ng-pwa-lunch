@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { RestaurantService, Restaurant } from './../../common/core/services/restaurant.service';
+import { RestaurantService } from './../../common/services/restaurant.service';
+import { Restaurant } from './../../common/interfaces';
 
 @Component({
   selector: 'app-restaurant-view',

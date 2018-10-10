@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { shareReplay, map } from 'rxjs/operators';
 
-import { RestaurantService, Restaurant } from './../../common/core/services/restaurant.service';
+import { RestaurantService } from './../../common/services/restaurant.service';
+import { Restaurant } from './../../common/interfaces';
 
 @Component({
   selector: 'app-restaurant-list',
