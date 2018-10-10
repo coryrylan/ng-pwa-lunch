@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SharedModule } from './../common/shared/shared.module';
-import { SettingsComponent } from './settings/settings.component';
+import { SettingsComponent } from './settings.component';
 
 const routes: Routes = [
   { path: '', component: SettingsComponent }
